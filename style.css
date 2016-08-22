@@ -1,0 +1,165 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black;
+  overflow: hidden;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*index.html*/
+
+#scanlines {
+  height: 80%;
+  width: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: linear-gradient(
+    #223 25%, #450 25%, #410 50%,
+    #230 50%, #210 75%, #200 75%, #190);
+  background-size: 6px 6px;
+  -webkit-box-shadow: inset 0px 0px 40px 20px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 0px 0px 40px 20px rgba(0,0,0,0.75);
+  box-shadow: inset 0px 0px 40px 20px rgba(0,0,0,0.75);
+  border-radius: 15px;
+  font-family: 'PC Senior';
+  color: rgba(62, 240, 0, 0.8);
+}
+
+.outer {
+  height: 10%;
+  width: 100%;
+  position: relative;
+}
+
+.text-wrapper {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#content {
+  height: 80%;
+  width: 90%;
+  margin: auto;
+}
+
+#content * {
+  position: relative;
+}
+
+.spacer {
+  height: 5%;
+}
+
+.col {
+  height: 90%;
+  width: 25%;
+  float: left;
+  margin-left: 6.25%;
+}
+
+.game {
+  height: 30%;
+  width: 100%;
+  display: none;
+  border: 1px solid rgba(62, 240, 0, 0.8);
+  cursor: pointer;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+/*tic-tac-toe-game.html*/
+
+#grid-wrapper {
+  width: 50%;
+  padding-bottom: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#grid-inner {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.cell {
+  height: 33.33%;
+  width: 33.33%;
+  position: relative;
+  float: left;
+  border: 1px solid rgba(62, 240, 0, 0.8);
+  font-size: 30px;
+}
+
+/*NYE Blue Screen*/
+
+#not-yet-implemented {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  -webkit-box-shadow: inset 0px 0px 40px 20px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 0px 0px 40px 20px rgba(0,0,0,0.75);
+  box-shadow: inset 0px 0px 40px 20px rgba(0,0,0,0.75);
+  border-radius: 15px;
+  background-color: blue;
+  color: white;
+}
+
+#not-yet-implemented a {
+  text-decoration: none;
+}
+
+#not-yet-implemented a:visited {
+  color: white;
+}
+
+/*Blinking Cursor*/
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+@media screen and (max-width: 767px) {
+  .scanlines {
+    width: 100%;
+    height: 100%;
+  }
+}
